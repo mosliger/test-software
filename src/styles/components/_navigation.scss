@@ -1,0 +1,15 @@
+.wrap-navigation {
+  min-width: 250px;
+  background: #333;
+  li > a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+  }
+  li > a.is-active {
+    background: #ddd;
+    color: #000;
+  }
+}

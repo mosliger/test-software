@@ -1,0 +1,13 @@
+.barcode-page {
+  .wrap-input {
+    display: flex;
+    margin: 40px 0;
+    button {
+      display: inline-block;
+      background: #d8d8d8;
+      border: 1px solid #d8d8d8;
+      min-width: 50px;
+      padding: 6px 10px;
+    }
+  }
+}
