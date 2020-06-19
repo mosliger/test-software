@@ -6,7 +6,7 @@ export default () => {
   const [keys, setKeys] = React.useState([]);
   const [value, setValue] = React.useState('');
   const [allKeyValue, setAllKeyValue] = React.useState('');
-  const regx = /NumLockAlt([0-3]|Alt)+NumLock|AltInsertInsertEndPageDown|ClearAlt([0-3]|Alt)+Clear|enter/gi;
+  const regx = /NumLockAlt([0-3]|Alt)+NumLock|AltInsertInsertEndPageDown|ClearAlt([0-3]|Alt)+Clear|Controlm|enter/ig;
 
   const handleReset = () => {
     setKeys([]);
