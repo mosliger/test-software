@@ -1,7 +1,7 @@
 .barcode-page {
   .wrap-input {
     display: flex;
-    margin: 40px 0;
+    margin: 20px 0;
     button {
       display: inline-block;
       background: #d8d8d8;
@@ -10,12 +10,17 @@
       padding: 6px 10px;
     }
   }
+  .wrap-input-regx {
+    display: flex;
+    align-items: flex-end;
+  }
   textarea {
     overflow: auto;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     font-family: monospace;
+    min-height: 36px;
 }
   ul > li {
     display: flex;

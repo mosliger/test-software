@@ -60,6 +60,18 @@ export default () => {
     setAllKeyValue(keyValue);
   };
 
+  const copyRegx = () => {
+    /* Get the text field */
+    const copyText = document.getElementById('value-regx');
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    /* Copy the text inside the text field */
+    document.execCommand('copy');
+  };
+
   const regx = new RegExp(regxBarcode, 'ig');
 
   return (
@@ -85,13 +97,25 @@ export default () => {
       </Tabs>
       <hr />
       <h2>Test Case</h2>
-      <textarea rows="2" value={regxBarcode} onChange={e => setRegxBarcode(e.target.value)} />
+      <div className="wrap-input-regx wrap-input">
+        <textarea
+          id="value-regx"
+          rows="2"
+          value={regxBarcode}
+          onChange={e => setRegxBarcode(e.target.value.replace(/\n/g, ''))}
+        />
+        <button onClick={copyRegx}>copy</button>
+      </div>
       <ul>
         {caseList.map((value) => {
           const isSuccess = value[0].replace(regx, '') === value[1];
           return (
             <li key={value[0]}>
-              {isSuccess ? <span className="icon success">&#10003;</span> : <span className="icon error">&#8856;</span>}
+              {isSuccess ? (
+                <span className="icon success">&#10003;</span>
+              ) : (
+                <span className="icon error">&#8856;</span>
+              )}
               <span>{value[0]}</span>
             </li>
           );
