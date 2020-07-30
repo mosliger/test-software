@@ -10,4 +10,28 @@
       padding: 6px 10px;
     }
   }
+  textarea {
+    overflow: auto;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+  ul > li {
+    display: flex;
+    align-items: center;
+    > .icon {
+      display: inline-block;
+      position: relative;
+      font-size: 30px;
+      margin-right: 10px;
+      line-height: 1;
+      &.success {
+        color: #22a503;
+      }
+      &.error {
+        color: #f00;
+      }
+    }
+  }
 }
