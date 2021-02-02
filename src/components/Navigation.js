@@ -14,6 +14,11 @@ export default () => (
           Barcode
         </NavLink>
       </li>
+      <li>
+        <NavLink exact activeClassName="is-active" to="/smart-connect">
+        Smart Connect
+        </NavLink>
+      </li>
     </ul>
   </div>
 );
